@@ -1,4 +1,4 @@
-package ù°��;
+package Ã¹Â°ÁÖ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 public class bj11660 {
    public static void main(String[] args) throws IOException {
       BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-      StringTokenizer st = new StringTokenizer(bf.readLine()); // N, M ����
+      StringTokenizer st = new StringTokenizer(bf.readLine()); // N, M ÀÐÀ½
       StringBuilder sb = new StringBuilder();
       int N = Integer.parseInt(st.nextToken());
       int M = Integer.parseInt(st.nextToken());
