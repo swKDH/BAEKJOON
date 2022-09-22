@@ -1,4 +1,4 @@
-package µÑÂ°ÁÖ;
+package ë‘˜ì§¸ì£¼;
 
 import java.io.BufferedReader;
 import java.util.LinkedList;
@@ -9,9 +9,9 @@ import java.io.InputStreamReader;
 public class bj1260 {
 
 	static StringBuilder sb = new StringBuilder();
-	static  int [][]arr;//°£¼± ¿¬°á»óÅÂ
-	static boolean []check;//È®ÀÎ
-	static int v, e, start;// Á¤Á¡, ¿§Áö, ½ÃÀÛÁ¤Á¡
+	static  int [][]arr;//ê°„ì„  ì—°ê²°ìƒíƒœ
+	static boolean []check;//í™•ì¸
+	static int v, e, start;// ì •ì , ì—£ì§€, ì‹œì‘ì •ì 
 	
 	static Queue<Integer> q = new LinkedList<>();
 
@@ -23,10 +23,10 @@ public class bj1260 {
 		e = Integer.parseInt(st.nextToken());
 		start= Integer.parseInt(st.nextToken());
 
-		arr = new int[v+1][v+1];//ÁÂÇ¥¸¦ ¹Ş±â À§ÇØ +1
-		check = new boolean[v+1];//ÃÊ±â°ª false
+		arr = new int[v+1][v+1];//ì¢Œí‘œë¥¼ ë°›ê¸° ìœ„í•´ +1
+		check = new boolean[v+1];//ì´ˆê¸°ê°’ false
 
-		//±×·¡ÇÁ »ı¼º
+		//ê·¸ë˜í”„ ìƒì„±
 		for(int i=0;i<e;i++) {
 			StringTokenizer str = new StringTokenizer(bf.readLine());
 			int x = Integer.parseInt(str.nextToken());
@@ -37,20 +37,20 @@ public class bj1260 {
 		}
 
 		dfs(start);
-		check = new boolean[v+1]; //È®ÀÎ»óÅÂ ÃÊ±âÈ­
+		check = new boolean[v+1]; //í™•ì¸ìƒíƒœ ì´ˆê¸°í™”
 		sb.append("\n");
 		bfs(start);
 		System.out.println(sb);		
 	}
 	
-	//½ÃÀÛÁ¡À» º¯¼ö·Î ¹Ş¾Æ È®ÀÎ, Ãâ·Â ÈÄ ´ÙÀ½ ¿¬°áÁ¡À» Ã£¾Æ ½ÃÀÛÁ¡À» º¯°æÇÏ¿© ÀçÈ£Ãâ
+	//ì‹œì‘ì ì„ ë³€ìˆ˜ë¡œ ë°›ì•„ í™•ì¸, ì¶œë ¥ í›„ ë‹¤ìŒ ì—°ê²°ì ì„ ì°¾ì•„ ì‹œì‘ì ì„ ë³€ê²½í•˜ì—¬ ì¬í˜¸ì¶œ
 	public static void dfs(int start) {
 
 		check[start] = true;
 		sb.append(start + " ");
 
 		for(int i = 0 ; i <= v ; i++) {
-			if(arr[start][i] == 1 && check[i]==false)//arr=1ÀÌ¸é °£¼±ÀÌ ÀÖ´Ù´Â ¶æ/check°¡ false¸é Å½»öÇÏÁö ¾ÊÀº Á¤Á¡
+			if(arr[start][i] == 1 && check[i]==false)//arr=1ì´ë©´ ê°„ì„ ì´ ìˆë‹¤ëŠ” ëœ»/checkê°€ falseë©´ íƒìƒ‰í•˜ì§€ ì•Šì€ ì •ì 
 				dfs(i);
 		}
 	}
@@ -60,7 +60,7 @@ public class bj1260 {
 		check[start] = true;
 		
 		while(!q.isEmpty()) {
-			start = q.poll();//Å¥¸¦ ¹İÈ¯ÇØÁØ´Ù
+			start = q.poll();//íë¥¼ ë°˜í™˜í•´ì¤€ë‹¤
 			sb.append(start + " ");
 			
 			for(int i = 1 ; i <= v ; i++) {
