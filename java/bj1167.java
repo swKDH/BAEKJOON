@@ -28,19 +28,19 @@ public class bj1167 {
 			}
 		}
 		
-		// ÀÓÀÇÀÇ Á¡ 1¿¡¼­ °¡Àå ¸Õ ³ëµå¸¦ Ã£À½ (start)
+		// ì„ì˜ì˜ ì  1ì—ì„œ ê°€ì¥ ë¨¼ ë…¸ë“œë¥¼ ì°¾ìŒ (start)
 		int[] dist = bfs(list, 1, n);
 		int start = 1;
 		for(int i=2; i<=n; i++) 
 			if(dist[i]>dist[start]) start = i;
 		
-		// °¡Àå Å×µÎ¸®¿¡ ÀÖ´Â ³ëµå¿¡¼­ °¡Àå ¸Õ ³ëµå¿ÍÀÇ °Å¸®¸¦ ±¸ÇÏ¸é ±×°ÍÀÌ Æ®¸®ÀÇ Áö¸§
+		// ê°€ì¥ í…Œë‘ë¦¬ì— ìˆëŠ” ë…¸ë“œì—ì„œ ê°€ì¥ ë¨¼ ë…¸ë“œì™€ì˜ ê±°ë¦¬ë¥¼ êµ¬í•˜ë©´ ê·¸ê²ƒì´ íŠ¸ë¦¬ì˜ ì§€ë¦„
 		dist = bfs(list, start, n);
 		Arrays.sort(dist);
 		System.out.print(dist[n]);
 	}
 	
-	// start·Î ºÎÅÍ °¢ Á¤Á¡ÀÇ ±æÀÌ¸¦ ±¸ÇÏ´Â ÇÔ¼ö
+	// startë¡œ ë¶€í„° ê° ì •ì ì˜ ê¸¸ì´ë¥¼ êµ¬í•˜ëŠ” í•¨ìˆ˜
 	static int[] bfs(List<Node>[] list, int start, int n) {
 		int[] dist = new int[n+1];
 		boolean[] visit = new boolean[n+1];
