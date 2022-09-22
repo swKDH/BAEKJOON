@@ -1,4 +1,4 @@
-package Ã¹Â°ÁÖ;
+package ì²«ì§¸ì£¼;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -10,7 +10,7 @@ public class bj1000 {
 		// TODO Auto-generated method stub
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(bf.readLine());
-		int num1 = Integer.parseInt(st.nextToken()); //nextToken ¶ç¾î¾²±â ´ÜÀ§·Î ÀĞ¾îµå¸²
+		int num1 = Integer.parseInt(st.nextToken()); //nextToken ë„ì–´ì“°ê¸° ë‹¨ìœ„ë¡œ ì½ì–´ë“œë¦¼
 		int num2 = Integer.parseInt(st.nextToken());
 		//System.out.println(num1+num2);
 		System.out.println(num1-num2);
