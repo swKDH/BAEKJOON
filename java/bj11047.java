@@ -1,16 +1,16 @@
-package Ã¹Â°ÁÖ;
+package ì²«ì§¸ì£¼;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
-// K¿øÀ» ¸¸µé±â À§ÇØ ÇÊ¿äÇÑ µ¿ÀüÀÇ ÃÖ¼Ò °³¼ö ±¸ÇÏ±â
+// Kì›ì„ ë§Œë“¤ê¸° ìœ„í•´ í•„ìš”í•œ ë™ì „ì˜ ìµœì†Œ ê°œìˆ˜ êµ¬í•˜ê¸°
 public class bj11047 {
    public static void main(String[] args) throws IOException {
       BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
       StringTokenizer st = new StringTokenizer(bf.readLine());
-      int N = Integer.parseInt(st.nextToken()); // µ¿Àü Á¾·ù N°³
-      int K = Integer.parseInt(st.nextToken()); // ±İ¾× K¿ø
+      int N = Integer.parseInt(st.nextToken()); // ë™ì „ ì¢…ë¥˜ Nê°œ
+      int K = Integer.parseInt(st.nextToken()); // ê¸ˆì•¡ Kì›
       
       int Money[] = new int[N];
       for(int i=0; i<N; i++) {
@@ -18,11 +18,11 @@ public class bj11047 {
          Money[i] = Integer.parseInt(st.nextToken());
       }
       
-      int count = 0; // µ¿ÀüÀÇ °³¼ö
+      int count = 0; // ë™ì „ì˜ ê°œìˆ˜
       
       for(int i=N-1; i>=0; i--) {
-         count += K / Money[i]; // ¸òÀÌ 0º¸´Ù Å©´Ù´Â ÀÇ¹Ì´Â µ¿ÀüÀ» »ç¿ëÇß´Ù´Â ÀÇ¹ÌÀÌ´Ù
-         K = K % Money[i]; // ³ª¸ÓÁö´Â ³²Àº ±İ¾×(K¿øº¸´Ù Money[i]°¡ Å©¸é ³ª¸ÓÁö´Â K¿ø ±×´ë·Î ÀÌ´Ù)
+         count += K / Money[i]; // ëª«ì´ 0ë³´ë‹¤ í¬ë‹¤ëŠ” ì˜ë¯¸ëŠ” ë™ì „ì„ ì‚¬ìš©í–ˆë‹¤ëŠ” ì˜ë¯¸ì´ë‹¤
+         K = K % Money[i]; // ë‚˜ë¨¸ì§€ëŠ” ë‚¨ì€ ê¸ˆì•¡(Kì›ë³´ë‹¤ Money[i]ê°€ í¬ë©´ ë‚˜ë¨¸ì§€ëŠ” Kì› ê·¸ëŒ€ë¡œ ì´ë‹¤)
          if(K==0) break;
       }
       System.out.println(count);
