@@ -10,45 +10,45 @@ public class bj1068 {
 
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        N = Integer.parseInt(br.readLine()); // Æ®¸®ÀÇ ³ëµåÀÇ °³¼ö N
+        N = Integer.parseInt(br.readLine()); // íŠ¸ë¦¬ì˜ ë…¸ë“œì˜ ê°œìˆ˜ N
         StringTokenizer st = new StringTokenizer(br.readLine());
-        eraseT = Integer.parseInt(br.readLine()); // Áö¿ï ³ëµåÀÇ ¹øÈ£
+        eraseT = Integer.parseInt(br.readLine()); // ì§€ìš¸ ë…¸ë“œì˜ ë²ˆí˜¸
 
-        leaf = new int[N]; // ¸®ÇÁ ³ëµå¸¦ ÀúÀåÇÒ ¹è¿­
-        // ¹éÁØ Á¦Ãâ½Ã ÁÖ¼® Ã³¸®
+        leaf = new int[N]; // ë¦¬í”„ ë…¸ë“œë¥¼ ì €ì¥í•  ë°°ì—´
+        // ë°±ì¤€ ì œì¶œì‹œ ì£¼ì„ ì²˜ë¦¬
 //        @SuppressWarnings("unchecked")
         tree = new ArrayList<>();
         for (int i = 0; i < N; i++)
-            tree.add(new ArrayList<Integer>()); // ÃÊ±âÈ­
+            tree.add(new ArrayList<Integer>()); // ì´ˆê¸°í™”
         for (int i = 0; i < N; i++) {
             int parent = Integer.parseInt(st.nextToken());
             if (parent == -1)
-                root = i; // Æ®¸®ÀÇ ·çÆ®
+                root = i; // íŠ¸ë¦¬ì˜ ë£¨íŠ¸
             else
-                tree.get(parent).add(i); // °¢ ³ëµåÀÇ ÀÚ½Ä
+                tree.get(parent).add(i); // ê° ë…¸ë“œì˜ ìì‹
         }
 
         for (int i = 0; i < N; i++) {
-            // Áö¿ï ³ëµå
+            // ì§€ìš¸ ë…¸ë“œ
             tree.get(i).removeIf(integer -> integer == eraseT);
         }
 
         if (eraseT != root)
-            // ·çÆ®¸¦ Áö¿ï °æ¿ì dfs ºÒÇÊ¿ä
+            // ë£¨íŠ¸ë¥¼ ì§€ìš¸ ê²½ìš° dfs ë¶ˆí•„ìš”
             DFS(root, -1);
         System.out.println(leaf[root]);
     }
 
     private static void DFS(int x, int parent) {
         if (tree.get(x).isEmpty())
-            // ÀÚ½ÄÀÌ ¾øÀ¸¸é ¸®ÇÁ³ëµå
+            // ìì‹ì´ ì—†ìœ¼ë©´ ë¦¬í”„ë…¸ë“œ
             leaf[x] = 1;
         for (int y : tree.get(x)) {
             if (y == parent)
-                // ºÎ¸ğ³ëµå´Â ÀÌ¹Ì Å½»ö Çß±â ¶§¹®¿¡ ³Ñ±â±â
+                // ë¶€ëª¨ë…¸ë“œëŠ” ì´ë¯¸ íƒìƒ‰ í–ˆê¸° ë•Œë¬¸ì— ë„˜ê¸°ê¸°
                 continue;
             DFS(y, x);
-            // ¸®ÇÁ³ëµåÀÇ °³¼ö¸¦ ºÎ¸ğ³ëµå¿¡ ´©Àû
+            // ë¦¬í”„ë…¸ë“œì˜ ê°œìˆ˜ë¥¼ ë¶€ëª¨ë…¸ë“œì— ëˆ„ì 
             leaf[x] += leaf[y];
         }
     }
