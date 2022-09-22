@@ -1,4 +1,4 @@
-package Ã¹Â°ÁÖ;
+package ì²«ì§¸ì£¼;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -10,10 +10,10 @@ public class bj11720 {
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(bf.readLine());
 		
-		String[] s = bf.readLine().split(""); //split »ç¿ëÇÏ¿© ¹è¿­·Î ÀÔ·Â ¹ŞÀ½
+		String[] s = bf.readLine().split(""); //split ì‚¬ìš©í•˜ì—¬ ë°°ì—´ë¡œ ì…ë ¥ ë°›ìŒ
 		int sum = 0;
 		
-		for(int i=0;i<N;i++) {//¹è¿­ÀÇ ÇÕ °è»ê
+		for(int i=0;i<N;i++) {//ë°°ì—´ì˜ í•© ê³„ì‚°
 			sum += Integer.parseInt(s[i]);
 		
 		}
