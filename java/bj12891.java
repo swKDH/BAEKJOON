@@ -1,40 +1,40 @@
-package Ã¹Â°ÁÖ;
+package ì²«ì§¸ì£¼;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class bj12891 { // ½½¶óÀÌµù À©µµ¿ì ¾Ë°í¸®Áò »ç¿ë -> ÇÏ³ª¾¿ ÀÌµ¿ : ±×·¡¼­ ½Ã°£º¹Àâµµ O(n)
+public class bj12891 { // ìŠ¬ë¼ì´ë”© ìœˆë„ìš° ì•Œê³ ë¦¬ì¦˜ ì‚¬ìš© -> í•˜ë‚˜ì”© ì´ë™ : ê·¸ë˜ì„œ ì‹œê°„ë³µì¡ë„ O(n)
    static int currentcheck[];
-   static int check[];  //Àü¿ªº¯¼ö
+   static int check[];  //ì „ì—­ë³€ìˆ˜
    static int count;
    public static void main(String[] args) throws IOException {
       BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
       StringTokenizer st = new StringTokenizer(bf.readLine());
-      int s = Integer.parseInt(st.nextToken());  // ¹®ÀÚ¿­ ÃÑ ±æÀÌ 
-      int p = Integer.parseInt(st.nextToken());  // ºÎºĞ ¹®ÀÚ¿­ ±æÀÌ
-      int answer = 0;   // ¹®Á¦¿¡¼­ ¿ä±¸ÇÏ´Â ´ä
-      check = new int[4];  // ex)2 0 0 1 °°Àº ¹®Á¦¿¡¼­ »ç¿ëÀÚ°¡ ÁöÁ¤ÇØÁÖ´Â °ª ÀúÀå
-      currentcheck = new int[4]; /* ¹®ÀÚ¿­À» ¹®ÀÚ·Î ÂÉ°³ A,C,G,T¿¡ ÇØ´çÇÏ´Â
-                                 °ªÀÌ ÀÖÀ¸¸é 1¾¿ ´õÇØÁÖ´Â °ªÀ» ÀúÀåÇÏ´Â ¹è¿­*/
-      count = 0; // 4°¡ µÇ¾î¾ß ¸¸Á·
-      char[] c = new char[s]; // ¹è¿­ c¸¦ s±æÀÌ¸¸Å­ °ø°£ »ı¼º.
+      int s = Integer.parseInt(st.nextToken());  // ë¬¸ìì—´ ì´ ê¸¸ì´ 
+      int p = Integer.parseInt(st.nextToken());  // ë¶€ë¶„ ë¬¸ìì—´ ê¸¸ì´
+      int answer = 0;   // ë¬¸ì œì—ì„œ ìš”êµ¬í•˜ëŠ” ë‹µ
+      check = new int[4];  // ex)2 0 0 1 ê°™ì€ ë¬¸ì œì—ì„œ ì‚¬ìš©ìê°€ ì§€ì •í•´ì£¼ëŠ” ê°’ ì €ì¥
+      currentcheck = new int[4]; /* ë¬¸ìì—´ì„ ë¬¸ìë¡œ ìª¼ê°œ A,C,G,Tì— í•´ë‹¹í•˜ëŠ”
+                                 ê°’ì´ ìˆìœ¼ë©´ 1ì”© ë”í•´ì£¼ëŠ” ê°’ì„ ì €ì¥í•˜ëŠ” ë°°ì—´*/
+      count = 0; // 4ê°€ ë˜ì–´ì•¼ ë§Œì¡±
+      char[] c = new char[s]; // ë°°ì—´ cë¥¼ sê¸¸ì´ë§Œí¼ ê³µê°„ ìƒì„±.
       
-      c = bf.readLine().toCharArray(); // ¹öÆÛ·Î ÀĞ¾îµéÀÎ ¹®ÀÚ¿­À» ¹®ÀÚ·Î ¹Ù²Ş
-      st = new StringTokenizer(bf.readLine()); // enter ÇÑ¹ø ´õ °¡´É
+      c = bf.readLine().toCharArray(); // ë²„í¼ë¡œ ì½ì–´ë“¤ì¸ ë¬¸ìì—´ì„ ë¬¸ìë¡œ ë°”ê¿ˆ
+      st = new StringTokenizer(bf.readLine()); // enter í•œë²ˆ ë” ê°€ëŠ¥
       for(int i=0;i<4;i++) {
          check[i] = Integer.parseInt(st.nextToken());
-         if(check[i] == 0) { // 2 0 1 1 ÀÇ °æ¿ì 0 ÀÌ ÇÏ³ª ÀÖ±â ¶§¹®¿¡ count¸¦ 1·Î ¸¸µé¾îÁà¾ß ÇÑ´Ù.
-            count++; // 0 ÀÌÀÖÀ¸¸é 4°³Áß 1°³¸¦ Ä«¿îÆ® ÇØÁØ´Ù.
+         if(check[i] == 0) { // 2 0 1 1 ì˜ ê²½ìš° 0 ì´ í•˜ë‚˜ ìˆê¸° ë•Œë¬¸ì— countë¥¼ 1ë¡œ ë§Œë“¤ì–´ì¤˜ì•¼ í•œë‹¤.
+            count++; // 0 ì´ìˆìœ¼ë©´ 4ê°œì¤‘ 1ê°œë¥¼ ì¹´ìš´íŠ¸ í•´ì¤€ë‹¤.
          }
       }
-      for(int i=0;i<p;i++) { //ºÎºĞ ¹®ÀÚ¿­À» ¹Ş´Â°Í
+      for(int i=0;i<p;i++) { //ë¶€ë¶„ ë¬¸ìì—´ì„ ë°›ëŠ”ê²ƒ
          add(c[i]);
       }
       if(count == 4) answer++;
       
-      for(int i=p;i<s;i++) { // ½½¶óÀÌµù À©µµ¿ì.
+      for(int i=p;i<s;i++) { // ìŠ¬ë¼ì´ë”© ìœˆë„ìš°.
          int j= i-p;
          add(c[i]);
          sub(c[j]);
