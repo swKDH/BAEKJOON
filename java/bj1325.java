@@ -1,4 +1,4 @@
-package ¼ÂÂ°ÁÖ;
+package ì…‹ì§¸ì£¼;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -62,7 +62,7 @@ public class bj1325{
 		
 		System.out.println(sb.toString().trim());
 		
-		// ÄÄÇ»ÅÍ´ç ÇØÅ·ÃÖ´ë°³¼ö
+		// ì»´í“¨í„°ë‹¹ í•´í‚¹ìµœëŒ€ê°œìˆ˜
 //		System.out.println(Arrays.toString(ans));
 	}
 
