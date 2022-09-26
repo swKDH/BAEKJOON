@@ -10,24 +10,24 @@ public class bj1389 {
 
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
-        int[][] arr = new int[N + 1][N + 1]; // ¹è¿­ »ı¼º
+        int[][] arr = new int[N + 1][N + 1]; // ë°°ì—´ ìƒì„±
 
-        // ÃÊ±â°ª ¼³Á¤
+        // ì´ˆê¸°ê°’ ì„¤ì •
         for (int i = 1; i <= N; i++) {
             for (int j = 1; j <= N; j++) {
-                arr[i][j] = INITIAL_VALUE / 2; // 2Â÷¿ø ¹è¿­ ÃÊ±âÈ­
+                arr[i][j] = INITIAL_VALUE / 2; // 2ì°¨ì› ë°°ì—´ ì´ˆê¸°í™”
                 if (i == j)
-                    arr[i][j] = 0; // (i,i)ÀÎ °ª 0À¸·Î
+                    arr[i][j] = 0; // (i,i)ì¸ ê°’ 0ìœ¼ë¡œ
             }
         }
 
-        // °£¼±ÀÇ ¹æÇâÀÌ ¾ç¹æÇâÀÌ¾î¾ß ÇÔ.
+        // ê°„ì„ ì˜ ë°©í–¥ì´ ì–‘ë°©í–¥ì´ì–´ì•¼ í•¨.
         for (int i = 0; i < M; i++) {
             st = new StringTokenizer(br.readLine());
             int A = Integer.parseInt(st.nextToken());
             int B = Integer.parseInt(st.nextToken());
 
-            arr[A][B] = arr[B][A] = 1; // A¿Í B°¡ Ä£±¸ÀÌ¸é B¿Í Aµµ Ä£±¸´Ù
+            arr[A][B] = arr[B][A] = 1; // Aì™€ Bê°€ ì¹œêµ¬ì´ë©´ Bì™€ Aë„ ì¹œêµ¬ë‹¤
         }
 
         // floyd
@@ -42,7 +42,7 @@ public class bj1389 {
 
         int result = INITIAL_VALUE;
         int idx = -1;
-        // °¡Àå ÀÛÀº °ªÀ» °¡Áö´Â ÀÎµ¦½º Ã£±â
+        // ê°€ì¥ ì‘ì€ ê°’ì„ ê°€ì§€ëŠ” ì¸ë±ìŠ¤ ì°¾ê¸°
         for (int i = 1; i <= N; i++) {
             int total = 0;
             for (int j = 1; j <= N; j++) {
