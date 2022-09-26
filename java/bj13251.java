@@ -1,4 +1,4 @@
-package µÑÂ°ÁÖ;
+package ë‘˜ì§¸ì£¼;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,14 +10,14 @@ public class bj13251 {
    public static void main(String[] args) throws IOException {
       BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
       StringTokenizer st = new StringTokenizer(bf.readLine());
-      int M = Integer.parseInt(st.nextToken()); // Á¶¾àµ¹ÀÇ »ö»ó
+      int M = Integer.parseInt(st.nextToken()); // ì¡°ì•½ëŒì˜ ìƒ‰ìƒ
       st = new StringTokenizer(bf.readLine());
       int N[] = new int[M];
-      for(int i=0; i<M;i++) N[i] = Integer.parseInt(st.nextToken()); // °¢ »ö»ó¿¡ ´ëÇÑ Á¶¾àµ¹ÀÇ °³¼ö 
-      int K = Integer.parseInt(bf.readLine()); // ²¨³¾ Á¶¾àµ¹ÀÇ °³¼ö
+      for(int i=0; i<M;i++) N[i] = Integer.parseInt(st.nextToken()); // ê° ìƒ‰ìƒì— ëŒ€í•œ ì¡°ì•½ëŒì˜ ê°œìˆ˜ 
+      int K = Integer.parseInt(bf.readLine()); // êº¼ë‚¼ ì¡°ì•½ëŒì˜ ê°œìˆ˜
       int t = 0;
       double total = 0;
-      for(int i=0; i<M; i++) t += N[i]; // Á¶¾àµ¹ÀÇ ÃÑ °³¼ö
+      for(int i=0; i<M; i++) t += N[i]; // ì¡°ì•½ëŒì˜ ì´ ê°œìˆ˜
       for(int i=0; i<M;i++) {
          if(N[i] >= K) {
             double prob = 1;
