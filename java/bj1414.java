@@ -6,7 +6,7 @@ import java.util.Queue;
 
 public class bj1414{
 
-	static class Node implements Comparable<Node>{ // °£¼± Á¤º¸
+	static class Node implements Comparable<Node>{ // ê°„ì„  ì •ë³´
 		int a;
 		int b;
 		int length;
@@ -16,15 +16,15 @@ public class bj1414{
 			this.length = length;
 		}
 		@Override
-		public int compareTo(Node o) { // ¿À¸§Â÷¼øÀ¸·Î Á¤·Ä
+		public int compareTo(Node o) { // ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬
 		return this.length - o.length;
 		}
 	}
-	static int n; // ÄÄÇ»ÅÍ °³¼ö
-	static int[] parents; // ºÎ¸ð³ëµå
+	static int n; // ì»´í“¨í„° ê°œìˆ˜
+	static int[] parents; // ë¶€ëª¨ë…¸ë“œ
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		n = Integer.parseInt(br.readLine()); // ÄÄÇ»ÅÍ °³¼ö
+		n = Integer.parseInt(br.readLine()); // ì»´í“¨í„° ê°œìˆ˜
 		
 		char[][] map = new char[n][n];
 		for(int i=0; i<n; i++) {
@@ -51,7 +51,7 @@ public class bj1414{
 		}
 		
 		int size = pq.size();
-		int cycle = 1; // n¹øÀÌ µÇ¸é ³¡³².
+		int cycle = 1; // në²ˆì´ ë˜ë©´ ëë‚¨.
 		int result = 0;
 		for(int i=0; i<size; i++) {
 			Node node = pq.poll();
