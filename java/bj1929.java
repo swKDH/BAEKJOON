@@ -1,4 +1,4 @@
-package Ã¹Â°ÁÖ;
+package ì²«ì§¸ì£¼;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -20,10 +20,10 @@ public class bj1929 {
 				continue;
 			}
 			for(int j=i+i; j<=e; j=j+i) {
-				check[j]=true; //j=i+i -> 2ÀÇ ¹è¼ö¸éÀº ¼Ò¼ö°¡ ¾Æ´Ï±â¿¡ true·Î º¯È¯
+				check[j]=true; //j=i+i -> 2ì˜ ë°°ìˆ˜ë©´ì€ ì†Œìˆ˜ê°€ ì•„ë‹ˆê¸°ì— trueë¡œ ë³€í™˜
 			}
 		}
-		for( int i=s; i<=e; i++) { //Ãâ·ÂÇØÁÖ´Â ¹İº¹¹®À» ³Ö¾îÁÖ°í false(¼Ò¼ö)ÀÎ°æ¿ì¸¸ Ãâ·Â
+		for( int i=s; i<=e; i++) { //ì¶œë ¥í•´ì£¼ëŠ” ë°˜ë³µë¬¸ì„ ë„£ì–´ì£¼ê³  false(ì†Œìˆ˜)ì¸ê²½ìš°ë§Œ ì¶œë ¥
 			
 			if(check[i]==false) {
 				System.out.println(i);
