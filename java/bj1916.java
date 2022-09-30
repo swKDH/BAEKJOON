@@ -1,4 +1,4 @@
-package ¼ÂÂ°ÁÖ;
+package ì…‹ì§¸ì£¼;
 
 import java.util.*;
 import java.io.*;
@@ -23,7 +23,7 @@ public class bj1916{
                     continue;
                 }
 
-                map[i][j] = Integer.MAX_VALUE; //map ¹è¿­ ÃÊ±âÈ­
+                map[i][j] = Integer.MAX_VALUE; //map ë°°ì—´ ì´ˆê¸°í™”
             }
 
         for(int i = 0; i<M; i++){
@@ -33,7 +33,7 @@ public class bj1916{
             int col = Integer.parseInt(st.nextToken()) - 1;
             int val = Integer.parseInt(st.nextToken());
 
-            // °°Àº °æ·Î°¡ ¿©·¯ ¹ø µé¾î¿Ã °æ¿ì °¡Àå ÀÛÀº weight °ªÀ» ÀúÀå
+            // ê°™ì€ ê²½ë¡œê°€ ì—¬ëŸ¬ ë²ˆ ë“¤ì–´ì˜¬ ê²½ìš° ê°€ìž¥ ìž‘ì€ weight ê°’ì„ ì €ìž¥
             map[row][col] = Math.min(map[row][col], val);
         }
 
