@@ -1,4 +1,4 @@
-package Ã¹Â°ÁÖ;
+package ì²«ì§¸ì£¼;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,16 +10,16 @@ public class bj1874 {
    public static void main(String[] args) throws NumberFormatException, IOException {
       // TODO Auto-generated method stub
       BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
-      StringBuilder sb = new StringBuilder(); // Ãâ·ÂÇÒ °á°ú¸¦ ÀúÀå 
+      StringBuilder sb = new StringBuilder(); // ì¶œë ¥í•  ê²°ê³¼ë¥¼ ì €ìž¥ 
       
       Stack<Integer> stack = new Stack<>();
       
-      int N = Integer.parseInt(br.readLine()); // Ã¹ÁÙ ÀÔ·Â ¹ÞÀ½ 
+      int N = Integer.parseInt(br.readLine()); // ì²«ì¤„ ìž…ë ¥ ë°›ìŒ 
       
       int start = 0;
       
       
-      while (N-->0) { // N-->0 ÀÌ¶õ N--; ¿Í N>0 À» ÇÕÄ£°Å¶û °°À½  , N ¹ø ¹Ýº¹ 
+      while (N-->0) { // N-->0 ì´ëž€ N--; ì™€ N>0 ì„ í•©ì¹œê±°ëž‘ ê°™ìŒ  , N ë²ˆ ë°˜ë³µ 
          int value = Integer.parseInt(br.readLine());
          
          if(value > start) {
