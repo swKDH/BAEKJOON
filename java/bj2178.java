@@ -1,4 +1,4 @@
-package µÑÂ°ÁÖ;
+package ë‘˜ì§¸ì£¼;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,8 +13,8 @@ public class bj2178 {
 	static int n;
 	static int m;
 	static boolean[][] visited;
-	static int[] dx = { -1, 1, 0, 0 }; //x¹æÇâ¹è¿­-»óÇÏ
-    	static int[] dy = { 0, 0, -1, 1 }; //y¹æÇâ¹è¿­-ÁÂ¿ì
+	static int[] dx = { -1, 1, 0, 0 }; //xë°©í–¥ë°°ì—´-ìƒí•˜
+    	static int[] dy = { 0, 0, -1, 1 }; //yë°©í–¥ë°°ì—´-ì¢Œìš°
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
